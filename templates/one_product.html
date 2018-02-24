@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Товар</title>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="Page description">
+    <meta name="keywords" content="page, keywords">
+    <meta name="theme-color" content="#000000">
+    <meta name="copyright" content="Author">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+    <meta name="apple-mobile-web-app-title" content="Application Name">
+    <meta name="msapplication-TileImage" content="img/favicons/144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+      @charset "UTF-8";html{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.5;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;background:#fff;color:#666}body{margin:0}pre{margin:0 0 20px}pre{font:.875rem/1.5 Consolas,monaco,monospace;color:#666;-moz-tab-size:4;-o-tab-size:4;tab-size:4;overflow:auto;padding:10px;border:1px solid #e5e5e5;border-radius:3px;background:#fff}
+    </style>
+    <link rel="preload" href="css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.min.css"></noscript>
+    <script>!function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){function e(){t.media=a}var a=t.media||"all";t.addEventListener?t.addEventListener("load",e):t.attachEvent&&t.attachEvent("onload",e),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(e,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>
+    <link rel="shortcut icon" href="img/favicons/64x64.png" type="image/png">
+    <link rel="icon" href="img/favicons/152x152.png" type="image/png" sizes="152x152">
+    <link rel="icon" href="img/favicons/256x256.png" type="image/png" sizes="256x256">
+    <link rel="icon" href="img/favicons/512x512.png" type="image/png" sizes="512x512">
+    <link rel="apple-touch-icon" href="img/favicons/152x152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="img/favicons/256x256.png" sizes="256x256">
+    <link rel="apple-touch-icon" href="img/favicons/512x512.png" sizes="512x512">
+    <link rel="manifest" href="manifest.json">
+  </head>
+  <body>
+    <script src="js/libs.min.js"></script>
+    <script src="js/common.min.js"></script>
+    <header class="inner-header" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky;">
+      <div class="uk-container uk-container-large uk-margin-top uk-margin-bottom">
+        <nav class="uk-navbar-container uk-visible@m" uk-navbar="" style="position: relative;">
+          <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+              <li class="logo"><a class="uk-padding" href="index.html" target="_blank"><img src="img/png/logo3.png" alt="logo"></a></li>
+              <li class="language"><a class="english uk-active"><img src="img/png/russian.png" alt="english"><span class="lang">Russian</span></a>
+                <div class="change-lang" uk-dropdown="mode: click"><a class="lang"><img src="img/png/english.png" alt="russian"><span class="lang">English</span></a></div>
+              </li>
+            </ul>
+          </div>
+          <div class="uk-navbar-center">
+            <ul class="uk-navbar-nav">
+              <li class="uk-active"><a class="active" href="categories.html">Каталог</a></li>
+              <li><a href="ship_pay.html">Оплата и Доставка</a></li>
+              <li><a href="reviews.html">Отзывы</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+              <li class="phone"><a href="tel: +996 (700) 970 430" uk-icon="icon:  triangle-down">+996 (700) 970 430</a>
+                <div class="uk-navbar-dropdown">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li><a href="tel: +996 (700) 970 430">+996 (700) 970 430</a></li>
+                    <li><a href="tel: +996 (700) 970 430">+996 (700) 970 430</a></li>
+                    <li><a href="tel: +996 (700) 970 430">+996 (700) 970 430</a></li>
+                    <li><a href="tel: +996 (700) 970 430">+996 (700) 970 430</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="feedback_btn"><a class="feedback" href="#modal-feedback" uk-toggle="">Обратная связь
+                  <div class="uk-flex-top" id="modal-feedback" uk-modal="">
+                    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                      <button class="uk-modal-close-outside" type="button" uk-close=""></button>
+                      <div class="uk-grid-collapse uk-flex-middle uk-margin-remove" uk-grid="">
+                        <div class="form uk-width-1-1">
+                          <form class="uk-grid-small" action="" uk-grid="">
+                            <h2 class="uk-margin-remove-bottom uk-width-1-1">Обратная связь</h2>
+                            <p class="back uk-margin-remove-top uk-width-1-1">Введите ваши данные и наши менеджеры свяжутся с вами в кротчайшие время.</p>
+                            <div class="name uk-margin-small uk-width-1-2@s">
+                              <input class="uk-input" type="text" placeholder="Имя" name="" value="">
+                            </div>
+                            <div class="tel uk-margin-small uk-paddinr-remove uk-width-1-2@s">
+                              <input class="uk-input phone" type="phone" placeholder="Телефон" name="" value="">
+                            </div>
+                            <div class="mail uk-margin-small uk-width-1-1">
+                              <input class="uk-input" type="email" placeholder="E-mail" name="" value="">
+                            </div>
+                            <div class="send uk-margin uk-width-1-1">
+                              <button class="uk-button uk-button-default" type="submit" name="" value="" uk-toggle="target: #successfully">Отправить</button>
+                              <div id="successfully" uk-modal="">
+                                <div class="uk-modal-dialog uk-modal-body">
+                                  <button class="uk-modal-close-outside" type="button" uk-close=""></button>
+                                  <div class="uk-text-center"><img src="img/png/suc.png" alt=""></div>
+                                  <div class="uk-text-center">
+                                    <h2>Успешно отправлено</h2>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div></a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="mobile uk-offcanvas-content uk-hidden@m">
+          <button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-nav-primary"><i class="fa fa-2x fa-bars" aria-hidden="true"></i></button>
+          <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+              <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                <li class="logo"></li><a class="uk-padding" href="index.html" target="_blank"><img src="img/png/logo.png" alt="logo"></a>
+                <li class="language"><a class="english uk-active"><img src="img/png/russian.png" alt="english"><span class="lang">Russian</span></a>
+                  <div class="change-lang" uk-dropdown="mode: click"><a class="lang"><img src="img/png/english.png" alt="russian"><span class="lang">English</span></a></div>
+                </li>
+                <li class="uk-active"><a class="active" href="categories.html">Каталог</a></li>
+                <li><a href="ship_pay.html">Оплата и Доставка</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li class="feedback_btn"><a class="feedback" href="#modal-feedback" uk-toggle="">Обратная связь
+                    <div class="uk-flex-top" id="modal-feedback" uk-modal="">
+                      <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                        <button class="uk-modal-close-outside" type="button" uk-close=""></button>
+                        <div class="uk-grid-collapse uk-flex-middle uk-margin-remove" uk-grid="">
+                          <div class="form uk-width-1-1">
+                            <form class="uk-grid-small" action="" uk-grid="">
+                              <h2 class="uk-margin-remove-bottom uk-width-1-1">Обратная связь</h2>
+                              <p class="back uk-margin-remove-top uk-width-1-1">Введите ваши данные и наши менеджеры свяжутся с вами в кротчайшие время.</p>
+                              <div class="name uk-margin-small uk-width-1-2@s">
+                                <input class="uk-input" type="text" placeholder="Имя" name="" value="">
+                              </div>
+                              <div class="tel uk-margin-small uk-paddinr-remove uk-width-1-2@s">
+                                <input class="uk-input phone" type="phone" placeholder="Телефон" name="" value="">
+                              </div>
+                              <div class="mail uk-margin-small uk-width-1-1">
+                                <input class="uk-input" type="email" placeholder="E-mail" name="" value="">
+                              </div>
+                              <div class="send uk-margin uk-width-1-1">
+                                <button class="uk-button uk-button-default" type="submit" name="" value="" uk-toggle="target: #successfully">Отправить</button>
+                                <div id="successfully" uk-modal="">
+                                  <div class="uk-modal-dialog uk-modal-body">
+                                    <button class="uk-modal-close-outside" type="button" uk-close=""></button>
+                                    <div class="uk-text-center"><img src="img/png/suc.png" alt=""></div>
+                                    <div class="uk-text-center">
+                                      <h2>Успешно отправлено</h2>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="breadcrumb">
+      <div class="uk-padding-small uk-container">
+        <ul class="uk-breadcrumb">
+          <li><a href="index.html">Главная</a></li>
+          <li><span>Категории</span></li>
+          <li><a href="ship_pay.html">Оплата и доставка</a></li>
+          <li><a href="reviews.html">Отзывы</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="about-product">
+      <div class="uk-container">
+        <div class="uk-margin-medium-top uk-margin-medium-bottom">
+          <div class="uk-grid uk-flex-middle uk-child-width-1-2@s" uk-grid="">
+            <div class="slide_item">
+              <div class="zooming uk-text-center uk-margin-small-bottom"><i class="fa fa-search" aria-hidden="true"></i><span>Наведите курсор, чтобы увеличить</span></div>
+              <div class="slider-for">
+                <div class="img">
+                  <div class="uk-padding uk-height-large uk-margin-auto"><img class="zoom-image" src="img/png/one-pr1.png" alt=""></div>
+                </div>
+                <div class="img">
+                  <div class="uk-padding uk-height-large uk-margin-auto"><img class="zoom-image" src="img/png/one-pr4.png" alt=""></div>
+                </div>
+                <div class="img">
+                  <div class="uk-padding uk-height-large uk-margin-auto"><img class="zoom-image" src="img/png/one-pr3.png" alt=""></div>
+                </div>
+                <div class="img">
+                  <div class="uk-padding uk-height-large uk-margin-auto"><img class="zoom-image" src="img/png/one-pr2.png" alt=""></div>
+                </div>
+                <div class="img">
+                  <div class="uk-padding uk-height-large uk-margin-auto"><img class="zoom-image" src="img/png/one-pr5.png" alt=""></div>
+                </div>
+              </div>
+              <div class="slider-nav">
+                <div class="img"><img data-lazy="img/png/one-pr6.png" alt=""></div>
+                <div class="img"><img data-lazy="img/png/one-pr4.png" alt=""></div>
+                <div class="img"><img data-lazy="img/png/one-pr3.png" alt=""></div>
+                <div class="img"><img data-lazy="img/png/one-pr2.png" alt=""></div>
+                <div class="img"><img data-lazy="img/png/one-pr5.png" alt=""></div>
+                <div class="img"><img data-lazy="img/png/one-pr6.png" alt=""></div>
+                <div class="img"><img data-lazy="img/png/one-pr4.png" alt=""></div>
+                <div class="img"><img data-lazy="img/png/one-pr3.png" alt=""></div>
+                <div class="img"><img data-lazy="img/png/one-pr2.png" alt=""></div>
+                <div class="img"><img data-lazy="img/png/one-pr5.png" alt=""></div>
+              </div>
+            </div>
+            <div class="product_item">
+              <h2 class="uk-margin-small">Брюки D040/gerry</h2>
+              <p class="price"><b>Цена</b>: 700 сом</p>
+              <div class="choose uk-grid uk-grid-collapse uk-grid-match" uk-grid="">
+                <div class="title uk-width-1-4@s uk-width-1-4">
+                  <p class="textile uk-margin-small">Размерный ряд</p>
+                  <p class="textile uk-margin-small">Состав ткани</p>
+                  <p class="textile uk-margin-small">Цвет</p>
+                  <p class="textile uk-margin-small">Вес 1 линии</p>
+                  <p class="textile uk-margin-small">В 1-ой линейке</p>
+                </div>
+                <div class="choosing uk-width-expand@s uk-width-expand">
+                  <p class="consist uk-margin-small">42-56</p>
+                  <p class="consist uk-margin-small">вискоза 60%, полиэстер 37%, спандекс 3%</p>
+                  <form class="consist uk-margin-small" action="">
+                    <label>
+                      <input name="radio2" type="radio" value=" " checked hidden>
+                      <div class="green" style="background: yellow; width: 20px; height: 20px; display: inline-block;"></div>
+                    </label>
+                    <label>
+                      <input name="radio2" type="radio" value=" " hidden>
+                      <div class="green" style="background: green; width: 20px; height: 20px; display: inline-block;"></div>
+                    </label>
+                    <label>
+                      <input name="radio2" type="radio" value=" " hidden>
+                      <div class="green" style="background: red; width: 20px; height: 20px; display: inline-block;"></div>
+                    </label>
+                    <label>
+                      <input name="radio2" type="radio" value=" " hidden>
+                      <div class="green" style="background: blue; width: 20px; height: 20px; display: inline-block;"></div>
+                    </label>
+                    <label>
+                      <input name="radio2" type="radio" value=" " hidden>
+                      <div class="green" style="background: brown; width: 20px; height: 20px; display: inline-block;"></div>
+                    </label>
+                    <label>
+                      <input name="radio2" type="radio" value=" " hidden>
+                      <div class="green" style="background: orangered; width: 20px; height: 20px; display: inline-block;"></div>
+                    </label>
+                  </form>
+                  <p class="consist uk-margin-small">2 кг</p>
+                  <p class="consist uk-margin-small">6 штук</p>
+                </div>
+              </div>
+              <p class="about-textile uk-margin-medium-top">Гармоничная женственность и строгая сдержанность делового стиля - нашли идеальное сочетание в этой универсальной модели. Эти трендовые брюки классического фасона в меланжевую клетку окажутся незаменимы при ежедневном создании традиционного офисного look - a (с классической белой рубашкой или водолазкой) или активного городского (с лаконичным полу-пальто, ботильонами). Эстетичные линии свободного силуэта обеспечат прекрасную посадку на фигурах всех типов. Укороченная линия низа брючин с подворотами</p>
+              <div class="order uk-margin-medium-top"><a class="modal uk-button uk-button-default" href="#order-product" uk-toggle="">Сделать заказ
+                  <div class="uk-flex-top" id="order-product" uk-modal="">
+                    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+                      <button class="uk-modal-close-outside" type="button" uk-close=""></button>
+                      <div class="uk-grid-collapse uk-flex-middle uk-margin-remove" uk-grid="">
+                        <div class="img uk-padding-remove uk-width-1-3@s"><img src="img/png/order.png" alt=""></div>
+                        <div class="form uk-width-expand@s">
+                          <form class="uk-grid-small" action="" uk-grid="">
+                            <h2 class="uk-margin-remove-bottom uk-width-1-1">Брюки D040/gerry</h2>
+                            <p class="price uk-margin-remove-top uk-width-1-1">Цена: 700сом</p>
+                            <div class="name uk-margin-small uk-width-1-2@s">
+                              <input class="uk-input" type="text" placeholder="Имя" required>
+                            </div>
+                            <div class="tel uk-margin-small uk-paddinr-remove uk-width-1-2@s">
+                              <input class="uk-input phone" type="phone" name="" value="" placeholder="Телефон" required>
+                            </div>
+                            <div class="mail uk-margin-small uk-width-1-1">
+                              <input class="uk-input" type="email" name="" value="" placeholder="E-mail" required>
+                            </div>
+                            <div class="message uk-margin-small uk-width-1-1">
+                              <textarea class="uk-textarea" rows="5" placeholder="Сообщение" required></textarea>
+                            </div>
+                            <div class="send uk-margin uk-width-1-1">
+                              <button class="uk-button uk-button-default" type="submit" name="" value="">Сделать заказ</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div></a></div>
+            </div>
+          </div>
+        </div>
+        <section class="product other_products uk-margin-medium-top uk-margin-medium-bottom">
+          <div class="head uk-text-center uk-margin-medium-bottom">
+            <h2>Рекомендуем</h2>
+          </div>
+          <div class="product_catalog uk-grid uk-grid-small uk-grid-match uk-child-width-1-2@s uk-child-width-1-5@m" uk-grid="">
+            <div class="product_new">
+              <div class="lazy uk-box-shadow-large uk-background-cover uk-height-large uk-panel uk-flex uk-flex-top uk-flex-left uk-inline-clip uk-transition-toggle" tabindex="0" data-src="img/png/product2.png">
+                <div class="product_about uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">
+                  <div class="see_product"><a class="uk-border-circle" href="one_product.html"><img src="img/png/see-product.png" alt=""></a></div>
+                </div>
+              </div>
+              <div class="text uk-text-center uk-margin-top">
+                <p class="size uk-margin-remove">Vinnie Pants</p>
+                <h4 class="price uk-margin-remove">1.200 сом</h4>
+              </div>
+            </div>
+            <div class="product_new">
+              <div class="lazy uk-box-shadow-large uk-background-cover uk-height-large uk-panel uk-flex uk-flex-top uk-flex-left uk-inline-clip uk-transition-toggle" tabindex="0" data-src="img/png/product2.png">
+                <div class="product_about uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">
+                  <div class="see_product"><a class="uk-border-circle" href="one_product.html"><img src="img/png/see-product.png" alt=""></a></div>
+                </div>
+              </div>
+              <div class="text uk-text-center uk-margin-top">
+                <p class="size uk-margin-remove">Vinnie Pants</p>
+                <h4 class="price uk-margin-remove">1.200 сом</h4>
+              </div>
+            </div>
+            <div class="product_new">
+              <div class="lazy uk-box-shadow-large uk-background-cover uk-height-large uk-panel uk-flex uk-flex-top uk-flex-left uk-inline-clip uk-transition-toggle" tabindex="0" data-src="img/png/product3.png">
+                <div class="product_about uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">
+                  <div class="see_product"><a class="uk-border-circle" href="one_product.html"><img src="img/png/see-product.png" alt=""></a></div>
+                </div>
+              </div>
+              <div class="text uk-text-center uk-margin-top">
+                <p class="size uk-margin-remove">Vinnie Pants</p>
+                <h4 class="price uk-margin-remove">1.200 сом</h4>
+              </div>
+            </div>
+            <div class="product_new">
+              <div class="lazy uk-box-shadow-large uk-background-cover uk-height-large uk-panel uk-flex uk-flex-top uk-flex-left uk-inline-clip uk-transition-toggle" tabindex="0" data-src="img/png/product4.png">
+                <div class="product_about uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">
+                  <div class="see_product"><a class="uk-border-circle" href="one_product.html"><img src="img/png/see-product.png" alt=""></a></div>
+                </div>
+              </div>
+              <div class="text uk-text-center uk-margin-top">
+                <p class="size uk-margin-remove">Vinnie Pants</p>
+                <h4 class="price uk-margin-remove">1.200 сом</h4>
+              </div>
+            </div>
+            <div class="product_new">
+              <div class="lazy uk-box-shadow-large uk-background-cover uk-height-large uk-panel uk-flex uk-flex-top uk-flex-left uk-inline-clip uk-transition-toggle" tabindex="0" data-src="img/png/product8.png">
+                <div class="product_about uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle">
+                  <div class="see_product"><a class="uk-border-circle" href="one_product.html"><img src="img/png/see-product.png" alt=""></a></div>
+                </div>
+              </div>
+              <div class="text uk-text-center uk-margin-top">
+                <p class="size uk-margin-remove">Vinnie Pants</p>
+                <h4 class="price uk-margin-remove">1.200 сом</h4>
+              </div>
+            </div>
+          </div>
+          <section class="pagination uk-margin-medium-top">
+            <ul class="uk-pagination uk-flex-center">
+              <li class="uk-icon-button"><a href="">1</a></li>
+              <li class="uk-icon-button"><a href="">2</a></li>
+              <li class="uk-active uk-icon-button"><a href="">3</a></li>
+              <li class="uk-icon-button"><a href="">4</a></li>
+              <li class="uk-icon-button"><a href="">5</a></li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </section>
+    <footer>
+      <div class="uk-container">
+        <div class="uk-margin-top uk-margin-bottom uk-grid uk-grid-collapse uk-flex-middle" uk-grid="">
+          <div class="text line-before uk-width-expand@s">
+            <h2>Будь в курсе новинок</h2>
+            <p>Каждый месяц вы будете получать выгодные предложения от нашей компании</p>
+          </div>
+          <div class="form uk-text-center uk-width-auto@s">
+            <form action="">
+              <input type="text" placeholder="Введите ваш E-mail">
+              <button class="uk-button uk-button-default" type="submit" value="send"><i class="fa fa-envelope" aria-hidden="true"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="uk-margin-top foot_menu">
+        <div class="uk-container">
+          <div class="delivery uk-grid uk-grid-collapse uk-flex uk-flex-middle uk-child-width-1-3@s" uk-grid="">
+            <div class="item divider">
+              <div class="inline uk-grid uk-grid-collapse uk-flex-middle uk-margin-remove">
+                <div class="image car uk-width-1-4@s"><img src="img/png/f_icon.png" alt=""></div>
+                <div class="text uk-width-expand@s">
+                  <h4>Бесплатная доставка по Кыргызстану</h4>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="inline uk-grid uk-grid-collapse uk-flex-middle uk-margin-remove">
+                <div class="image uk-width-1-4@s"><img src="img/png/f_icon2.png" alt=""></div>
+                <div class="text uk-width-expand@s">
+                  <h4>Постоянным клиентам <br> скидки</h4>
+                </div>
+              </div>
+            </div>
+            <div class="item last">
+              <div class="inline uk-grid uk-grid-collapse uk-flex-middle">
+                <div class="image hours uk-width-1-4@s"><img src="img/png/f_icon3.png" alt=""></div>
+                <div class="text uk-width-expand@s">
+                  <h4>Гарантия доставки <br> в срок</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <nav class="uk-navbar-container uk-navbar-transparent icons uk-margin-top uk-visible@s" uk-navbar="" style="position: relative;">
+            <div class="uk-navbar-center">
+              <ul class="uk-navbar-nav">
+                <li><a href=""><i class="uk-icon-button fa fa-facebook" aria-hidden="true"> </i><span class="social">Facebook</span></a></li>
+                <li><a href=""><i class="uk-icon-button fa fa-instagram" aria-hidden="true"> </i><span class="social">Instagram</span></a></li>
+                <li><a href=""><i class="uk-icon-button fa fa-vk" aria-hidden="true"> </i><span class="social">VKontakte</span></a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="icons_small uk-grid uk-flex-middle uk-text-center uk-hidden@s uk-child-width-1-3" uk-grid="">
+            <div class="icon"><a href=""><i class="uk-icon-button fa fa-facebook" aria-hidden="true"></i><span class="social">Facebook</span></a></div>
+            <div class="icon"><a href=""><i class="uk-icon-button fa fa-instagram" aria-hidden="true"></i><span class="social">Instagram</span></a></div>
+            <div class="icon"><a href=""><i class="uk-icon-button fa fa-vk" aria-hidden="true"></i><span class="social">VKontakte</span></a></div>
+          </div>
+          <div class="uk-divider-small uk-margin-medium-top uk-margin-bottom uk-text-center"></div>
+          <div class="foot_sub_menu">
+            <nav class="uk-navbar-container uk-navbar-transparent uk-visible@s" uk-navbar="" style="position: relative;">
+              <div class="uk-navbar-center">
+                <ul class="uk-navbar-nav">
+                  <li class="uk-active"><a class="active" href="index.html">Главная</a></li>
+                  <li><a href="categories.html">Категории</a></li>
+                  <li><a href="ship_pay.html">Оплата и Доставка</a></li>
+                  <li><a href="reviews.html">Отзывы</a></li>
+                  <li><a href="news.html">Новости</a></li>
+                  <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="copyright uk-text-center">
+            <p>Victoria  © 2009 - 2018</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
